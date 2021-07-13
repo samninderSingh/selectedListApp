@@ -1,0 +1,53 @@
+<!-- <div
+  class="flex-container"
+  style="display: flex; width: 100%; background: silver; align-items: baseline"
+>
+  <div style="flex-grow: 1">
+    <input
+      type="checkbox"
+      [checked]="
+        listManagement.selectedItemCount == listManagement.availableItemCount
+      "
+      [indeterminate]="listManagement.intermidateCheckBoxStatus()"
+      (click)="listManagement.allChecked($event)"
+    />
+  </div>
+  <div style="flex-grow: 1">
+    Selected
+    <span>{{
+      listManagement.selectedItemCount == 0
+        ? "none"
+        : listManagement.selectedItemCount
+    }}</span>
+  </div>
+  <div style="flex-grow: 4" (click)="listManagement.printResult()">
+    Download selected
+  </div>
+</div> -->
+<div
+  class="col-12 row"
+  style="background-color: #c6c6c6; margin: 0px; padding: 10px"
+>
+  <div class="col-1">
+    <input
+      type="checkbox"
+      [checked]="
+        listManagement.selectedItemCount == listManagement.availableItemCount
+      "
+      [indeterminate]="listManagement.intermidateCheckBoxStatus()"
+      (click)="listManagement.allChecked($event)"
+    />
+  </div>
+  <div class="col-2">
+    Selected
+    <span>{{
+      listManagement.selectedItemCount == 0
+        ? "none"
+        : listManagement.selectedItemCount
+    }}</span>
+  </div>
+  <div class="col-9" (click)="listManagement.printResult()">
+    <img src="./assets/download.png" alt="download" style="width: 15px" />
+    <span>Download selected</span>
+  </div>
+</div>
